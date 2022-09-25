@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+    {% if values|length > 0 %}
+
+        <div class="mx-auto mt-5 w-75 p-3 ">
+        <table class="table">
+            <thead class="table table-dark">
+              <tr >
+                <th class = "pb-3 pt-3" scope="col">#</th>
+                <th class = "pb-3 pt-3" scope="col">Date</th>
+                <th class = "pb-3 pt-3" scope="col">Type</th>
+                <th class = "pb-3 pt-3" scope="col">Category</th>
+                <th class = "pb-3 pt-3" scope="col">Amount</th>
+                <th class = "pb-3 pt-3" scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for value in values %}
+              <tr>
+                <th class = "pt-3" scope="row">{{value.id}}</th>
+                <td class = "pt-3" >{{value.date}}</td>
+                <td class = "pt-3" >{{value.type}}</td>
+                <td class = "pt-3" >{{value.category}}</td>
+                <td class = "pt-3" >{{value.amount}}</td>
+                <td><a class="btn btn-outline-secondary" href = "/delete/{{value.id}}" role="button">Delete</a></td>
+              </tr>
+             {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        
+        
+
+            {% endif %}
+
+{% endblock %}

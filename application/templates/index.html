@@ -1,0 +1,33 @@
+<html>
+    <head>
+    <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        {% block head %} {% endblock %}
+      </head>
+    <body>
+        <div >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="navbar-brand mb-0 h1" href="/">HOME</a>
+                  </li>
+                  
+                </ul>
+                <span class="navbar-text">
+                    <a class="btn btn-outline-secondary" href="/dashboard" role="button">Dashboard</a>
+                    <a class="btn btn-outline-secondary" href="/submit" role="button">ADD</a>
+                    <a class="btn btn-outline-secondary" href="/" role="button">Log Out</a>
+                </span>
+              </div>
+            </div>
+          </nav>
+        </div>
+       
+        {% block body %} {% endblock %}
+        
+        
+    </body>
+</html>
